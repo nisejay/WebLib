@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link href="css/common.css" rel="stylesheet" type="text/css"></link>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/cpb-tips.js"></script>
+    <style>
+         /*demo style*/
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        input{width: 400px; padding: 4px 4px; font-size: 13px; line-height: 18px; border: 1px solid #ccc; background-color: #fff; box-shadow: 2px 2px 2px #f0f0f0 inset; vertical-align: middle; margin: 80px 0 0 0; font-family: inherit; }
+        input:focus, textarea:focus { outline: 2px solid #99d8f5; border-color: #7bbff2; background-color: #fffbde; }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <p>
+        <input id="top" type="text" value="直角、浅黄背景、箭头向下，10%左间距"/>
+        <input id="bottom" type="text" value="直角、白色背景、箭头向上，50%左间距"/>
+        <input id="left" type="text" value="直角、深绿背景、箭头向右，50%上间距"/>
+        <input id="right" type="text" value="直角、深绿背景、箭头向左，50%左间距"/>
+
+        <input id="radius_top" type="text" value="圆角、箭头向下"/>
+        <input id="radius_bottom" type="text" value="圆角、箭头向上"/>
+        <input id="radius_left" type="text" value="圆角、箭头向左"/>
+        <input id="radius_right" type="text" value="圆角、箭头向右"/>
+    </p>
+</div>
+
+
+<script>
+    $(function () {
+        $.cpb_tips.show({obj: $("#top"), style:'lightYellow',arrows_place:'10%', direction: 'top', msg: '11111111111111111111111111'});
+        $.cpb_tips.show({obj: $("#bottom"), style:'white', direction: 'bottom', msg: '222222222222222222222222'});
+        $.cpb_tips.show({obj: $("#right"), style:'deepGreen', direction: 'right', msg: '333333333333333333333333'});
+        $.cpb_tips.show({obj: $("#left"), style:'deepGreen', direction: 'left', msg: '4444444444444444444444'});
+
+        $.cpb_tips.show({obj: $("#radius_top"), style:'radius', direction: 'top', msg: '55555555555555555555555'});
+        $.cpb_tips.show({obj: $("#radius_left"), style:'radius', direction: 'left', msg: '666666666666666666666666'});
+        $.cpb_tips.show({obj: $("#radius_right"), style:'radius', direction: 'right', msg: '7777777777777777777777'});
+        $.cpb_tips.show({obj: $("#radius_bottom"), style:'radius', direction: 'bottom', msg: '8888888888888888888888888'});
+
+        //alert($(".x-tooltip-radius").width());
+    });
+</script>
+</body>
+</html>

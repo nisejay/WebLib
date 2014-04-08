@@ -1,0 +1,38 @@
+/*提示框样式*/
+.x-tooltip{display:inline;position:absolute;border:1px solid #CFB888;background:#FCF2B8;color:#333;padding:3px 0 5px;-webkit-box-shadow:2px 2px 2px #ccc;-moz-box-shadow:2px 2px 2px #ccc;box-shadow:2px 2px 2px #ccc;line-height:16px;z-index:10000}
+.x-tooltip-container{display:inline-block;margin:0 8px;float:left}
+.x-tooltip-container h5,.x-tooltip-container h6,.x-tooltip-container h4,.x-tooltip-container h3,.x-tooltip-container p{margin:0}
+.x-tooltip-close{display:inline-block;font-size:14px;font-weight:bold;font-family:'黑体';color:#999;width:16px;margin-right:2px;float:left;_margin-right:1px;text-decoration:none}
+.x-tooltip-close:hover{color:#C3C3C3}
+.x-tooltip-arrow{position:absolute;background:url(../images/arrow.gif) no-repeat}
+.x-tooltip-arrow-top,.x-tooltip-arrow-bottom{width:20px;height:10px;left:38.2%;margin-left:-10px}
+.x-tooltip-arrow-top{top:-9px;background-position:0 -60px}
+.x-tooltip-arrow-bottom{bottom:-10px;_bottom:-19px}
+.x-tooltip-arrow-left,.x-tooltip-arrow-right{width:10px;height:20px;top:50%;margin-top:-10px}
+.x-tooltip-arrow-left{left:-10px;background-position:100% -20px}
+.x-tooltip-arrow-right{right:-10px;_right:-11px;background-position:0 -40px}
+.x-tooltip-alt{color:#353535;border:1px solid #D6D6D6;background:#FDFDFD}
+.x-tooltip-alt .x-tooltip-close{color:#939393}
+.x-tooltip-alt .x-tooltip-close:hover{color:#C8C8C8}
+.x-tooltip-alt .x-tooltip-arrow{background-image:url(../images/arrow-alt.gif)}
+.x-tooltip-highlight{color:#FFFEFF;border:1px solid #428900;background:#65B41D}
+.x-tooltip-highlight .x-tooltip-close{color:#EAF7E6}
+.x-tooltip-highlight .x-tooltip-close:hover{color:#A8DE6C}
+.x-tooltip-highlight .x-tooltip-arrow{background-image:url(../images/arrow-highlight.gif)}
+/*圆角样式*/
+.x-tooltip-radius{border: none;background: transparent;}
+.x-tooltip-radius .x-tooltip-arrow{background:url(../images/arrow-radius.gif) no-repeat;z-index: 1;}
+.x-tooltip-radius span{display: inline-block;}
+.x-tooltip-top-radius{width: 100%;height: 4px;background: url("../images/tips_t.gif") repeat-x;position: absolute;top: -4px;left: 0}
+.x-tooltip-bottom-radius{width: 100%;height: 6px;background: url("../images/tips_b.gif") repeat-x;position: absolute;bottom: -6px;_bottom:-14px;left: 0}
+.x-tooltip-left-radius{height: 100%;width: 4px;background: url("../images/tips_l.gif") repeat-y;position: absolute;left: -4px;top: 0}
+.x-tooltip-right-radius{height: 100%;width: 6px;background: url("../images/tips_r.gif") repeat-y;position: absolute;right: -6px;top: 0}
+.x-tooltip-left-top-radius{height: 4px;width: 4px;background: url("../images/tips_l_t.gif") no-repeat;position: absolute;left: -4px;top:-4px}
+.x-tooltip-right-top-radius{height: 4px;width: 6px;background: url("../images/tips_r_t.gif") no-repeat;position: absolute;right: -6px;top:-4px;}
+.x-tooltip-left-bottom-radius{height: 6px;width: 5px;background: url("../images/tips_l_b.gif") no-repeat;position: absolute;left: -4px;bottom: -6px;_bottom:-14px;}
+.x-tooltip-right-bottom-radius{height: 6px;width: 6px;background: url("../images/tips_r_b.gif") no-repeat;position: absolute;right: -6px;bottom: -6px;_bottom:-14px;}
+.x-tooltip-radius .x-tooltip-arrow-top{top:-12px;background-position:0 -60px;_top:-12px;}
+.x-tooltip-radius .x-tooltip-arrow-bottom{bottom:-13px;_bottom:-17px;}
+.x-tooltip-radius .x-tooltip-arrow-left{left:-13px;background-position:100% -20px;_left:-12px;}
+.x-tooltip-radius .x-tooltip-arrow-right{right:-13px;_right:-14px;background-position:0 -40px;_right:-12px;}
+.x-tooltip-radius .x-tooltip-close {_margin-right:0;}
