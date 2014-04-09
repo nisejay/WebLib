@@ -610,42 +610,102 @@ NB.Env = {
      * @name NB.Env.domain
      * @constant
      */
-    domain      : 'nbcoders.com',
+    domain: 'nbcoders.com',
     /**
      * 静态s域前缀：http://s.nbcoders.com/，用于引用静态文件version.js及jQuery.js
      * @name NB.Env.staticRoot
      * @constant
      */
-    staticRoot  : 'http://s.nbcoders.com/',
+    staticRoot: 'http://s.nbcoders.com/',
     /**
      * 静态pic域前缀：http://pic.nbcoders.com/images/，用于引用网站图片
      * @name NB.Env.picRoot
      * @constant
      */
-    picRoot  : 'http://pic.nbcoders.com/images/',
+    picRoot: 'http://pic.nbcoders.com/images/',
     /**
      * 静态css域前缀：http://css.nbcoders.com/css/，用于引用网站样式表
      * @name NB.Env.cssRoot
      * @constant
      */
-    cssRoot  : 'http://css.nbcoders.com/css/',
+    cssRoot: 'http://css.nbcoders.com/css/',
     /**
      * 静态js域前缀：http://js.nbcoders.com/js/，用于引用网站js文件
      * @name NB.Env.jsRoot
      * @constant
      */
-    jsRoot  : 'http://js.nbcoders.com/js/',
+    jsRoot: 'http://js.nbcoders.com/js/',
     /**
      * www域前缀：http://www.nbcoders.com/
      * @name NB.Env.wwwRoot
      * @constant
      */
-    wwwRoot     : 'http://www.nbcoders.com/'
+    wwwRoot: 'http://www.nbcoders.com/'
+};
+
+/**
+ * 校验类型与格式
+ * @namespace Verify
+ * @name NB.Verify
+ */
+NB.Verify = {
     /**
-     * a域前缀：http://a.nbcoders.com/
-     * @name NB.Env.aRoot
+     * 校验电话号码
+     * @name NB.Verify.isTel
      * @constant
      */
+    isTel: function (str) {
+        return /(^(\d{3,5}-)?\d{7,8})$|(^13[0-9]{9}$)|(^((\+)?\d{2,5}-)(\d{3,5}-)\d{7,8})$/.test(str);
+    },
+    /**
+     * 校验手机号码
+     * @name NB.Verify.isPhone
+     * @constant
+     */
+    isPhone: function (str) {
+        return /^0{0,1}(13[0-9]|145|147|15[0-3]|15[5-9]|18[0-9])[0-9]{8}$/.test(str);
+    },
+    /**
+     * 校验电子邮箱格式
+     * @name NB.Verify.isEmail
+     * @constant
+     */
+    isEmail: function (str) {
+        //return /\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/.test(str);
+        return /[\u4e00-\u9fa5\w]+((-w+)|(\.[\u4e00-\u9fa5\w]+))*\@[\u4e00-\u9fa5A-Za-z0-9]+((\.|-)[\u4e00-\u9fa5A-Za-z0-9]+)*\.[A-Za-z0-9]+/.test(str);
+    },
+    /**
+     * 校验邮编
+     * @name NB.Verify.isPost
+     * @constant
+     */
+    isPost: function (str) {
+        return /\d{6}/.test(str);
+    },
+    /**
+     * 校验身份证号码
+     * @name NB.Verify.isIdCardNo
+     * @constant
+     */
+    isIdCardNo: function (str) {
+        return /^\d{17}[\d|x]$|^\d{15}$/.test(str);
+    },
+    /**
+     * 校验身份证号码(严格校验地区码，出生日期，校验码等信息)
+     * @name NB.Verify.isPost
+     * @constant
+     */
+    isIdCardNoStrict: function (str) {
+        return /^\d{17}[\d|x]$|^\d{15}$/.test(str);
+    },
+    /**
+     * 校验IP地址格式
+     * @name NB.Verify.isIp
+     * @constant
+     */
+    isIp: function (str) {
+        return /^((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d)$)/.test(str);
+    },
 };
 
 NB.Common = {
